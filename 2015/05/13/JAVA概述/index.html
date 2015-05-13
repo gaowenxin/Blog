@@ -39,7 +39,7 @@
   </script>
 
 
-  <title> 第一眼就心动的人，要怎么做朋友 // Gillan Blog </title>
+  <title> JAVA概述 // Gillan Blog </title>
 </head>
 
 <body>
@@ -110,7 +110,7 @@
           
           
             
-              第一眼就心动的人，要怎么做朋友
+              JAVA概述
             
           
         </h1>
@@ -118,7 +118,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-05-11
+          发表于 2015-05-13
         </span>
 
         
@@ -127,8 +127,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/05/11/第一眼就心动的人，要怎么做朋友/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/11/第一眼就心动的人，要怎么做朋友/"></span>
+            <a href="/2015/05/13/JAVA概述/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/13/JAVA概述/"></span>
             </a>
           </span>
           
@@ -142,9 +142,136 @@
       
 
       
-        <h5 id="不是无病呻吟，只是有点，想你"><em>不是无病呻吟，只是有点，想你</em></h5><blockquote>
-<p><img src="http://7xi3em.com1.z0.glb.clouddn.com/psb.jpg" alt=""></p>
-</blockquote>
+        <h1 id="J2SE之JAVA概述">J2SE之JAVA概述</h1><a id="more"></a>
+<hr>
+<p> java两种核心机制： <code>java虚拟机</code>,<code>垃圾收集机制</code></p>
+<p><code>java虚拟机：</code> 源代码文件(＊.java)经过java编译器翻译成字节码(＊.class)，通过类装载器，字节码校验器，解释器交给操作系统平台，操作系统把它翻译成机器可以认知的部分。</p>
+<p>操作系统上方的环境是给java编译执行的，叫做java虚拟机，以java为代码作为可执行文件。不同的平台有不同的虚拟机，正因为如此，java才真正实现了跨平台，在任何一个地方的写的java文件，首先把它<code>编译</code>成class文件，当它要<code>执行</code>的时候，如果放在UNIX上，它就在UNIX上面的虚拟机上执行，如果放在windows上，它就在windows上面的虚拟机上执行，这些虚拟的环境对于class文件的接口是一样的，可以实现一次编译到处运行。</p>
+<p><code>垃圾收集机制：</code>不需要程序员负责内存空间的回收</p>
+<hr>
+<p><code>JDK:</code>Software Development Kit(软件开发包)</p>
+<p><code>JDK:</code>Java Runtime Environment(java运行环境)</p>
+<p>开发需要JDK,用户只需JDK</p>
+<hr>
+<h4 id="Java_Application初步"><em>Java Application初步</em></h4><ul>
+<li>java源文件以“java”为扩展名。源文件的基本组成部分是类（class），如本例中的HelloWorld类</li>
+<li>一个源文件中最多只有一个public类。其他类的个数不限，如果源文件包含一个public类，它必须按该类命名</li>
+<li>Java应用程序的执行入口是main()方法。固定书写格式：public static void main(String args[ ]){…}</li>
+</ul>
+<hr>
+<h4 id="标识符"><em>标识符</em></h4><p>凡是自己可以取名字的地方都叫标识符</p>
+<p>命名规则：</p>
+<ul>
+<li>标识符由字母，数字，下划线”_”，美元符”$”组成</li>
+<li>不能以数字开头</li>
+<li>标识符大小写敏感，长度无限制</li>
+</ul>
+<hr>
+<h4 id="关键字"><em>关键字</em></h4><p>Java的关键字都是小写</p>
+<hr>
+<h4 id="Java常量"><em>Java常量</em></h4><ul>
+<li>整型常量：123</li>
+<li>实型常量：3.14</li>
+<li>字符常量：’a’</li>
+<li>逻辑常量：true,false</li>
+<li>字符串常量：”hello world”</li>
+</ul>
+<hr>
+<h4 id="Java变量"><em>Java变量</em></h4><p>从本质上讲，变量其实是内存中的一小块区域，使用变量名来访问这块区域，每个变量名使用之前必要要申请（声明），然后进行填充内容，才能使用（赋值）</p>
+<hr>
+<h4 id="程序执行过程"><em>程序执行过程</em></h4><p>.exe直接放到操作系统上执行.class放到虚拟机上执行</p>
+<p>在硬盘上会有一个程序存在，比如.exe文件，比如.class文件，区别不是很大。但是这个时候只是一个静态的概念，想要运行起来，首先把程序代码load到内存的区域，操作系统会找到代码，开始执行，执行的过程中会把内存主要分为四块区域：code segment(存放代码)，data segment(静态变量 字符串常量)，stack(局部变量)，heap(new出来的东西)</p>
+<hr>
+<h4 id="Java变量的分类"><em>Java变量的分类</em></h4><ul>
+<li>按被声明的位置划分：<code>局部变量</code>，<code>成员变量</code></li>
+</ul>
+<p><code>局部变量：</code>方法或语句块内部定义的变量</p>
+<p><code>成员变量：</code>方法外部，类的内部定义的变量（类外面不能有变量的声明）</p>
+<hr>
+<h4 id="Java基本数据类型"><em>Java基本数据类型</em></h4><ul>
+<li>逻辑型：boolean</li>
+<li>字符型：char</li>
+<li>整数型：byte，short，int，long</li>
+<li>浮点数型：float，double</li>
+</ul>
+<p><code>逻辑型Boolean</code>:boolean类型只允许取值true或false，不可以用0或非0的整数代替true或false</p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> i;</span><br><span class="line">i = <span class="keyword">true</span>;</span><br><span class="line"><span class="keyword">if</span>(i)&#123;</span><br><span class="line">	<span class="comment">//do something;</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p><code>字符型char</code>:字符常量为用单引号括起来的单个字符</p>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">Java字符采用Unicode编码，每个字符占两个字节</span></span><br><span class="line"></span><br><span class="line"><span class="comment">Java语言中还允许使用转义字符'\n'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">补充：2进制，10进制，16进制的转换</span></span><br><span class="line"></span><br><span class="line"><span class="comment">1101</span><span class="literal">-</span><span class="literal">-</span><span class="comment">1*1</span> <span class="literal">+</span> <span class="comment">0*2</span> <span class="literal">+</span> <span class="comment">1*4</span> <span class="literal">+</span> <span class="comment">1*8</span></span><br><span class="line"></span><br><span class="line"><span class="comment">13</span><span class="literal">-</span><span class="literal">-</span> <span class="comment">1</span> <span class="literal">+</span> <span class="comment">4</span> <span class="literal">+</span> <span class="comment">8</span>   <span class="literal">-</span><span class="literal">-</span><span class="comment">1101</span></span><br><span class="line"></span><br><span class="line"><span class="comment">1101</span><span class="literal">-</span><span class="literal">-</span> <span class="comment">D</span></span><br></pre></td></tr></table></figure>
+<p><code>整数类型</code>：Java的整数类型不受具体操作系统的影响，保证了 Java程序的可移植性</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Java语言整数常量的三种表示形式：</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span>十进制整数：</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span>八进制整数：以<span class="number">0</span>开头</span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>十六进制整数：以<span class="number">0</span>x开头或<span class="number">0</span>X开头</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Java语言的整型常量默认为<span class="keyword">int</span>，声明<span class="keyword">long</span>型常量时，后面加L</span><br><span class="line"><span class="keyword">long</span> l = <span class="number">88888888888888L</span>;   <span class="comment">//必须加L</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>占用存储空间</th>
+<th>表数范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>byte</td>
+<td>1字节</td>
+<td>-128～127</td>
+</tr>
+<tr>
+<td>short</td>
+<td>2字节</td>
+<td></td>
+</tr>
+<tr>
+<td>int</td>
+<td>4字节</td>
+<td>-2的31次幂～2的31次幂减一</td>
+</tr>
+<tr>
+<td>long</td>
+<td>8字节</td>
+</tr>
+</tbody>
+</table>
+<p><code>浮点数类型</code>：Java的浮点数类型不受具体操作系统的影响，保证了 Java程序的可移植性</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Java浮点数类型常量的两种表示形式：</span><br><span class="line"><span class="number">1.</span>十进制数</span><br><span class="line"><span class="number">2.</span>科学计数法</span><br><span class="line"></span><br><span class="line">Java语言的浮点数类型常量默认为<span class="keyword">double</span>，声明<span class="keyword">float</span>型常量时，后面加f</span><br><span class="line"><span class="keyword">float</span> f = <span class="number">12.3f</span>  <span class="comment">//必须加f</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>占用存储空间</th>
+<th>表数范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>4字节</td>
+<td>-3.403E38～3.403E38</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8字节</td>
+<td>-1.798E308～1.798E308</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="基本数据类型转换"><em>基本数据类型转换</em></h4><ol>
+<li>boolean类型不可以转换为其他的数据类型</li>
+<li>整型，字符型，浮点型的数据在混合运算中相互转换，转换时遵循以下规则：</li>
+</ol>
+<ul>
+<li>容量小的类型自动转换为容量大的数据类型，数据类型按容量大小排序为：</li>
+</ul>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">byte</span>,<span class="keyword">short</span>,<span class="keyword">char</span> -&gt; <span class="keyword">int</span> -&gt; <span class="keyword">long</span> -&gt; <span class="keyword">float</span> -&gt; <span class="keyword">double</span></span><br><span class="line">     </span><br><span class="line"><span class="keyword">byte</span>,<span class="keyword">short</span>,<span class="keyword">char</span>之间不会互相转换，它们三者在计算时首先转换为<span class="keyword">int</span>类型</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">* 容量大的数据类型转换为容量小的数据类型时，要加上强制转换符，但是能造成精度降低或溢出</span><br><span class="line">* 有多种类型的数据混合运算时，系统首先自动的将所有数据转换成容量大的那一种数据类型，然后再进行计算</span><br><span class="line">* 实数常量 （如：<span class="number">1.2</span>）默认为<span class="keyword">double</span></span><br><span class="line">* 整数常量 （如：<span class="number">123</span>）默认为<span class="keyword">int</span></span><br><span class="line">* 可以把<span class="keyword">int</span>赋给<span class="keyword">byte</span>，<span class="keyword">char</span>，<span class="keyword">short</span>，只要不超过它们所表数的范围（－<span class="number">128</span>～<span class="number">127</span>）</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">####*运算符*</span></span><br><span class="line"><span class="preprocessor">######*逻辑运算符：*</span></span><br><span class="line"></span><br><span class="line">|!|逻辑非|</span><br><span class="line">|--|-----|</span><br><span class="line">|&amp;|逻辑与|</span><br><span class="line">| ｜|逻辑或|</span><br><span class="line">|&amp;&amp;|短路与|</span><br><span class="line">|｜｜|短路或|</span><br><span class="line"></span><br><span class="line">* &amp;&amp;与&amp;区别在于：第二个操作数是否计算 </span><br><span class="line"></span><br><span class="line"><span class="preprocessor">######*字符串连接符:*</span></span><br><span class="line"></span><br><span class="line"><span class="string">"+"</span>除了用于算数加法运算，还可以用于字符串连接</span><br></pre></td></tr></table></figure>
+<p>int i = 800 +90;<br>String s = “hello” + “world”</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="string">"+"</span>运算符两侧的操作数中只要有一个字符串(<span class="keyword">String</span>)类型,系统会自动将另一个操作数转换为字符串然后再进行连接</span><br></pre></td></tr></table></figure>
+<p>int i = 12;<br>System.out.println(“c= “ + c);</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">当进行打印时，无论任何类型，都自动转换为字符串类型</span><br></pre></td></tr></table></figure>
+<p>System.out.println(c);</p>
+<p>```</p>
+<h6 id="三目条件运算符"><em>三目条件运算符</em></h6><p>语法格式：</p>
+<p>x?y:z(x为boolean类型表达式，先计算x的值，若为true，整个表达式的值为y；若为false，整个表达式的值为z)</p>
+<hr>
+<hr>
 
       
     </div>
@@ -156,13 +283,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/05/13/JAVA概述/">JAVA概述</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/05/05/支教初体验/">支教初体验</a>
+              <a href="/2015/05/11/第一眼就心动的人，要怎么做朋友/">第一眼就心动的人，要怎么做朋友</a>
             
           </div>
         </div>
@@ -178,8 +303,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/05/11/第一眼就心动的人，要怎么做朋友/"
-               data-title="第一眼就心动的人，要怎么做朋友" data-url="http://gillan.pw/2015/05/11/第一眼就心动的人，要怎么做朋友/">
+          <div class="ds-thread" data-thread-key="2015/05/13/JAVA概述/"
+               data-title="JAVA概述" data-url="http://gillan.pw/2015/05/13/JAVA概述/">
           </div>
         
       </div>
@@ -261,7 +386,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#不是无病呻吟，只是有点，想你"><span class="nav-number">1.</span> <span class="nav-text">不是无病呻吟，只是有点，想你</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#J2SE之JAVA概述"><span class="nav-number">1.</span> <span class="nav-text">J2SE之JAVA概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java_Application初步"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">Java Application初步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标识符"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关键字"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java常量"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">Java常量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java变量"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">Java变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程序执行过程"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">程序执行过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java变量的分类"><span class="nav-number">1.0.0.7.</span> <span class="nav-text">Java变量的分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java基本数据类型"><span class="nav-number">1.0.0.8.</span> <span class="nav-text">Java基本数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本数据类型转换"><span class="nav-number">1.0.0.9.</span> <span class="nav-text">基本数据类型转换</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#三目条件运算符"><span class="nav-number">1.0.0.9.0.1.</span> <span class="nav-text">三目条件运算符</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
