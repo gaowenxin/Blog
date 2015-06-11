@@ -39,7 +39,7 @@
   </script>
 
 
-  <title> 第一眼就心动的人，要怎么做朋友 // Gillan Blog </title>
+  <title> 指针的指针 // Gillan Blog </title>
 </head>
 
 <body>
@@ -110,7 +110,7 @@
           
           
             
-              第一眼就心动的人，要怎么做朋友
+              指针的指针
             
           
         </h1>
@@ -118,7 +118,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-05-11
+          发表于 2015-06-11
         </span>
 
         
@@ -127,8 +127,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/05/11/第一眼就心动的人，要怎么做朋友/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/11/第一眼就心动的人，要怎么做朋友/"></span>
+            <a href="/2015/06/11/指针的指针/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/11/指针的指针/"></span>
             </a>
           </span>
           
@@ -142,9 +142,12 @@
       
 
       
-        <h5 id="不是无病呻吟，只是有点，想你"><em>不是无病呻吟，只是有点，想你</em></h5><blockquote>
-<p><img src="http://7xi3em.com1.z0.glb.clouddn.com/psb.jpg" alt=""></p>
-</blockquote>
+        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">P = <span class="number">0025F</span>760;</span><br><span class="line">&amp;P = <span class="number">0025F</span>754;</span><br><span class="line">point = <span class="number">0025F</span>754;</span><br><span class="line">&amp;point = <span class="number">00225F</span>748;</span><br><span class="line">&amp;a[<span class="number">0</span>] = <span class="number">0025F</span>760;</span><br><span class="line">a[<span class="number">0</span>] = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>point指针中存放的是p指针的地址，p指针中存放的是a[0]的地址。所</p>
+<p>以＊point和p是一样的，前者是取point指针中存放的地址（0025F754）中的值，即取地址0025F</p>
+<p>754中存放的值（0025F760），而后者就是0025F760，所以两者是等价的。</p>
+<p>＊ ＊point和a[0]是等价的，前者可以写成 <em> p， </em> p是取p中存放的地址(0025F760)</p>
+<p>中的值，即地址0025F760中存放的值1。由上可以得出＊point等于p， ＊＊point 等于 a[0]。</p>
 
       
     </div>
@@ -156,13 +159,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/05/13/JAVA概述/">JAVA概述</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/05/05/支教初体验/">支教初体验</a>
+              <a href="/2015/05/13/JAVA概述/">JAVA概述</a>
             
           </div>
         </div>
@@ -178,8 +179,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/05/11/第一眼就心动的人，要怎么做朋友/"
-               data-title="第一眼就心动的人，要怎么做朋友" data-url="http://gillan.pw/2015/05/11/第一眼就心动的人，要怎么做朋友/">
+          <div class="ds-thread" data-thread-key="2015/06/11/指针的指针/"
+               data-title="指针的指针" data-url="http://gillan.pw/2015/06/11/指针的指针/">
           </div>
         
       </div>
@@ -261,7 +262,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#不是无病呻吟，只是有点，想你"><span class="nav-number">1.</span> <span class="nav-text">不是无病呻吟，只是有点，想你</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
